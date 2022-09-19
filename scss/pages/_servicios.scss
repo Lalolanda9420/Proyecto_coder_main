@@ -1,0 +1,51 @@
+
+#mainServicios{
+    @extend .contenedor;
+}
+
+#seccionPrincipalServicios{ 
+    &>h3{
+    color: $color-grisoscuro;
+    text-decoration: dashed;
+    }
+}
+
+#seccionPrincipalServicios img{
+    border-radius: 10px;
+    border-color: $color-grisoscuro;
+    border-style: solid 4px;
+}
+
+
+
+div h3{
+    background-color: map-get($estilos, color);
+    text-align: map-get($estilos, centro);
+    padding: 1rem;
+}
+
+.descripcionStaff{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &>a{
+        color:$color-grisoscuro;
+        }
+    &>.descripcionContacto{
+        background-color: none;
+    }
+}
+
+.descripcionStaff a:hover{
+    display:inline-block;
+    color: $color-titulos3;
+    padding-top: 0;
+    background-color: $color-hover;
+}
+
+.unionCajasServicios div a{
+    background-color: $color-grisoscuro;
+    color: $color-hover;
+    border-radius: 10px;
+}

@@ -1,0 +1,40 @@
+
+
+.principalShop img{
+    border-radius: 1rem;
+    border: solid $color-terciario;
+    margin-left: 0.2rem;
+    max-height: 830px;
+}
+
+#mainShop{
+    background-image: url();
+    z-index: -10;
+    @extend .contenedor;
+}
+
+.shopPagos{
+    border-radius: 1rem;
+    color: white;
+    background-image: $color-background;
+}
+
+.shopDescripcion{
+    font-weight: 600;
+    &>p{
+        background-color: white;
+    }
+}
+
+/*--Mixin Flex--*/
+@mixin centrado-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
