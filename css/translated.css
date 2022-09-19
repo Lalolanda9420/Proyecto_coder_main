@@ -1,0 +1,372 @@
+@charset "UTF-8";
+/*--Colores--*/
+/*--Mapas--*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+h1 {
+  font-family: 'Libre Baskerville', serif; }
+
+nav a:hover {
+  background-color: #fcddb5; }
+
+a:hover {
+  color: #2e8358;
+  border-color: #424040;
+  border-radius: 0.2rem;
+  transform: scale(1.2, 1.2);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+a:link {
+  text-decoration: none;
+  color: white; }
+
+a:visited {
+  color: #fcddb5; }
+
+a:active {
+  background-color: #2e8358;
+  color: #424040; }
+
+.tblanco {
+  color: white; }
+
+body {
+  background-color: #e7dbeb; }
+
+main {
+  line-height: 1,5;
+  padding: 0; }
+  main p {
+    text-align: justify;
+    line-height: 1,5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #424040;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0; }
+
+P::selection {
+  color: #424040;
+  background-color: #fcddb5; }
+
+/*--Base flexbox--*/
+.flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.button, .btn {
+  border: #ff9100 solid 2px; }
+  .button:hover, .btn:hover {
+    background-color: #f0a74f;
+    color: white; }
+
+.btn {
+  background-color: #2e8358;
+  justify-content: space-around; }
+
+.card {
+  border-radius: 1rem;
+  border-width: 0.3rem;
+  border-color: #f0a74f; }
+  .cardTittle {
+    color: #2e8358; }
+
+footer {
+  background-color: #383836;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 0.5rem;
+  background-image: linear-gradient(#252525, #575756); }
+
+#cajaFooter {
+  margin-right: 14vw;
+  margin-left: 10vw;
+  position: relative;
+  margin-bottom: 1px; }
+  #cajaFooter a {
+    bottom: 5vw;
+    right: 3vw; }
+  #cajaFooter p {
+    line-height: 1.4rem; }
+  #cajaFooter ul {
+    line-height: 1.5rem; }
+
+.logoWhatsapp {
+  position: fixed;
+  bottom: 1vw;
+  right: 3vw; }
+
+.logoInstagram, .logoFacebook {
+  background-color: #f0ddfc;
+  border-radius: 1rem;
+  margin-bottom: 4px; }
+  .logoInstagram:hover, .logoFacebook:hover {
+    transform: scale(1.5, 1.5); }
+
+.logoFacebook {
+  background-color: #9fbbf7; }
+
+.logoinstagram {
+  background: #f0ddfc; }
+
+.logofacebook {
+  background: #9fbbf7; }
+
+/*---APLICANDO GRIDS---*/
+#cajaFooter {
+  display: grid;
+  grid-template-columns: 40% 30% 30%;
+  grid-template-rows: 100%;
+  grid-template-areas: "contacto servicios mapa ";
+  grid-auto-flow: row;
+  gap: 10px 10px;
+  padding: 10px; }
+
+#cajaFooter iframe {
+  height: 180px; }
+
+.footerContacto {
+  grid-area: contacto; }
+
+.footerServicios {
+  grid-area: servicios; }
+
+.footerMapa {
+  grid-area: mapa; }
+
+#cajaFooter a:hover {
+  background: #f0dfc6;
+  color: #2e8358;
+  border-color: #424040;
+  border-radius: 0.2rem;
+  transform: scale(1.2, 1.2);
+  display: inline-block; }
+
+.parrafoWhatsapp a {
+  color: black;
+  background-color: #e7dbeb;
+  opacity: 90%;
+  font-weight: 200;
+  border-radius: 10px;
+  border-width: 1px;
+  font-size: larger;
+  padding: 5px; }
+
+@media screen and (max-width: 992px) {
+  #cajaFooter {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; } }
+
+/*-- Mixin y condicional--*/
+@media screen and (max-width: 991px) {
+  .logoPrincipal {
+    width: 120px;
+    height: 100%;
+    border-radius: 0.5rem;
+    padding: 6px; }
+  .logoSecciones {
+    width: 120px;
+    height: 100%;
+    border-radius: 0.5rem;
+    padding: 6px; } }
+
+@media screen and (min-width: 992px) {
+  .logoPrincipal {
+    width: 140px;
+    height: 100%;
+    border-radius: 0.5rem;
+    padding: 6px; }
+  .logoSecciones {
+    width: 140px;
+    height: 100%;
+    border-radius: 0.5rem;
+    padding: 6px; } }
+
+.recuadros {
+  background-color: #f8ead9;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #c5c3c3; }
+
+h2 {
+  color: #e7dbeb;
+  background-color: #424040;
+  text-align: center¿;
+  z-index: -2;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+
+h3 {
+  color: #60366d;
+  padding-top: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline; }
+
+/*--Main de Sección Inicio--*/
+.contenedor, #mainContacto, #mainShop, #mainServicios {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #e7dbeb;
+  background-color: #fbf7fc;
+  padding: 20px;
+  margin: 10px; }
+
+#nosotros-1 P::first-letter {
+  font-size: 130%;
+  float: inline-start; }
+
+/*--Contacto en Sección Inicio--*/
+.indexContacto {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around; }
+  .indexContacto > h2 {
+    z-index: 0; }
+
+.indexContacto > iframe {
+  height: 350px; }
+
+/*--shop en Sección Inicio--*/
+.shopIndex {
+  display: flex;
+  justify-content: space-around;
+  border-color: #c5c3c3;
+  border-width: 2px;
+  border-radius: 5px;
+  border-style: dashed;
+  background-color: #f0f0f0;
+  padding: 10px;
+  align-items: center;
+  background-image: url("../img/shop.png"); }
+  .shopIndex > a:hover {
+    background: none; }
+  .shopIndex > p:hover {
+    background: #fcddb5; }
+  .shopIndex > p:focus {
+    background: #fcddb5; }
+  .shopIndex > h4 {
+    color: #2e8358;
+    text-align: center¿; }
+
+.shopIndex img {
+  border-radius: 10px;
+  border-color: #424040;
+  border-style: solid;
+  align-items: center;
+  display: flex;
+  justify-content: space-around; }
+  .shopIndex img:hover {
+    color: white; }
+
+.shopIndexBoton > p {
+  background-color: white;
+  margin-left: 40px; }
+
+.shopIndexBoton > a {
+  display: inline-block; }
+
+/*--central futsal--*/
+.blog {
+  background-color: #2e8358;
+  text-align: justify;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column; }
+
+.blog a:hover {
+  background: #f0dfc6;
+  color: #2e8358;
+  border-color: #424040;
+  border-radius: 0.2rem;
+  transform: scale(1.2, 1.2);
+  padding: 2px;
+  display: inline-block; }
+
+.principalShop img {
+  border-radius: 1rem;
+  border: solid #2e8358;
+  margin-left: 0.2rem;
+  max-height: 830px; }
+
+#mainShop {
+  background-image: url();
+  z-index: -10; }
+
+.shopPagos {
+  border-radius: 1rem;
+  color: white;
+  background-image: radial-gradient(#353636, #9c9c9c); }
+
+.shopDescripcion {
+  font-weight: 600; }
+  .shopDescripcion > p {
+    background-color: white; }
+
+/*--Mixin Flex--*/
+.principalShop img {
+  border-radius: 1rem;
+  border: solid #2e8358;
+  margin-left: 0.2rem;
+  max-height: 830px; }
+
+#mainShop {
+  background-image: url();
+  z-index: -10; }
+
+.shopPagos {
+  border-radius: 1rem;
+  color: white;
+  background-image: radial-gradient(#353636, #9c9c9c); }
+
+.shopDescripcion {
+  font-weight: 600; }
+  .shopDescripcion > p {
+    background-color: white; }
+
+/*--Mixin Flex--*/
+#seccionPrincipalServicios > h3 {
+  color: #424040;
+  text-decoration: dashed; }
+
+#seccionPrincipalServicios img {
+  border-radius: 10px;
+  border-color: #424040;
+  border-style: solid 4px; }
+
+div h3 {
+  background-color: #f8ead9;
+  text-align: center;
+  padding: 1rem; }
+
+.descripcionStaff {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .descripcionStaff > a {
+    color: #424040; }
+  .descripcionStaff > .descripcionContacto {
+    background-color: none; }
+
+.descripcionStaff a:hover {
+  display: inline-block;
+  color: #60366d;
+  padding-top: 0;
+  background-color: #f0dfc6; }
+
+.unionCajasServicios div a {
+  background-color: #424040;
+  color: #f0dfc6;
+  border-radius: 10px; }
